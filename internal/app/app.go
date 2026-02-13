@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/somnifobia/media-downloader/internal/ytdl"
+	"github.com/somnifobia/media-downloader/internal/twitterdl"
 )
 
 func Download(rawURL, outputDir string) error {
@@ -19,6 +20,8 @@ func Download(rawURL, outputDir string) error {
 	switch {
 		case strings.Contains(host, "youtube") || strings.Contains(host, "youtu.be"):
 			return ytdl.Download(rawURL, outputDir)
+		case strings.Contains(host, "twitter.com") || strings.Contains(host, "x.com"):
+			return twitterdl.Download(rawURL, outputDir)
 		default:
 			return fmt.Errorf("unsupported URL: %s", host)
 	}
