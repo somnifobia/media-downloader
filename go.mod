@@ -1,4 +1,4 @@
-module github.com/somnifobia/media-downloader
+module github.com/somnifobia/medown
 
 go 1.25.6
 

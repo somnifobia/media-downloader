@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/spf13/cobra"
-	"github.com/somnifobia/media-downloader/internal/app"
+	"github.com/somnifobia/medown/internal/app"
 )
 
 var (
